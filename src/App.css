@@ -299,12 +299,3 @@ select option {
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Noto Color Emoji";
 }
-
-
-.compare .swiper-pagination {
-  @apply absolute top-0 grid grid-cols-2 gap-4
-}
-
-.compare .swiper-pagination-bullet {
-  @apply w-20
-}

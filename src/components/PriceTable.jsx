@@ -39,10 +39,10 @@ export default function PriceTable() {
             <div className="prices grid grid-cols-3 gap-4">
               <div className="price">
                 <button
-                  className={`w-[7rem] py-2.5 rounded-md outline leading-[0.7] ${
+                  className={`w-[5.5rem] py-2.5 rounded-mds border-b-2 leading-[0.7] ${
                     btnNum === 1
-                      ? "outline-2 outline-all"
-                      : "outline-1 outline-primary"
+                      ? "border-primary"
+                      : "border-primary/20"
                   }`}
                   onClick={() => setBtnNum(1)}
                 >
@@ -52,10 +52,10 @@ export default function PriceTable() {
 
               <div className="price">
                 <button
-                  className={`w-[7rem] py-2.5 rounded-md outline leading-[0.7] ${
+                  className={`w-[5.5rem] py-2.5 rounded-mds border-b-2 leading-[0.7] ${
                     btnNum === 2
-                      ? "outline-2 outline-all"
-                      : "outline-1 outline-primary"
+                      ? "border-primary"
+                      : "border-primary/20"
                   }`}
                   onClick={() => setBtnNum(2)}
                 >
@@ -65,10 +65,10 @@ export default function PriceTable() {
 
               <div className="price">
                 <button
-                  className={`w-[7rem] py-2.5 rounded-md outline leading-[0.7] ${
+                  className={`w-[5.5rem] py-2.5 rounded-mds border-b-2 leading-[0.7] ${
                     btnNum === 3
-                      ? "outline-2 outline-all"
-                      : "outline-1 outline-primary"
+                      ? "border-primary"
+                      : "border-primary/20"
                   }`}
                   onClick={() => setBtnNum(3)}
                 >
@@ -78,10 +78,10 @@ export default function PriceTable() {
 
               <div className="price">
                 <button
-                  className={`w-[7rem] py-2.5 rounded-md outline leading-[0.7] ${
+                  className={`w-[5.5rem] py-2.5 rounded-mds border-b-2 leading-[0.7] ${
                     btnNum === 4
-                      ? "outline-2 outline-all"
-                      : "outline-1 outline-primary"
+                      ? "border-primary"
+                      : "border-primary/20"
                   }`}
                   onClick={() => setBtnNum(4)}
                 >
@@ -91,10 +91,10 @@ export default function PriceTable() {
 
               <div className="price">
                 <button
-                  className={`w-[7rem] py-2.5 rounded-md outline leading-[0.7] ${
+                  className={`w-[5.5rem] py-2.5 rounded-mds border-b-2 leading-[0.7] ${
                     btnNum === 5
-                      ? "outline-2 outline-all"
-                      : "outline-1 outline-primary"
+                      ? "border-primary"
+                      : "border-primary/20"
                   }`}
                   onClick={() => setBtnNum(5)}
                 >
@@ -216,15 +216,15 @@ export default function PriceTable() {
       </div>
 
       {/* Mobile version */}
-      <div className="mobile-content relative lg:hidden flex flex-wrap justify-start items-center mt-10">
+      <div className="mobile-content relative z-20 lg:hidden flex flex-wrap justify-start items-center mt-10">
         <div className="top font-medium w-full">
           <div className="heading flex justify-center">
             {/* prices */}
             <div className="prices grid grid-cols-3 gap-2 xs:gap-4">
               <div className="price">
                 <button
-                  className={`w-full py-3 px-2 xs:p-3 rounded-md text-[0.95] ex:text-base transition-all duration-300 leading-[0.7] whitespace-nowrap border-2 ${
-                    btnNum === 1 ? "border-all" : "border-primary"
+                  className={`w-full py-3 px-2 xs:p-3 rounded-mdg text-[0.95] ex:text-base transition-all duration-300 leading-[0.7] whitespace-nowrap border-b-2 ${
+                    btnNum === 1 ? "border-primary" : "border-primary/20"
                   }`}
                   onClick={() => setBtnNum(1)}
                 >
@@ -233,8 +233,8 @@ export default function PriceTable() {
               </div>
               <div className="price">
                 <button
-                  className={`w-full py-3 px-2 xs:p-3 rounded-md text-[0.95] ex:text-base transition-all duration-300 leading-[0.7] whitespace-nowrap border-2 ${
-                    btnNum === 2 ? "border-all" : "border-primary"
+                  className={`w-full py-3 px-2 xs:p-3 rounded-mdg text-[0.95] ex:text-base transition-all duration-300 leading-[0.7] whitespace-nowrap border-b-2 ${
+                    btnNum === 2 ? "border-primary" : "border-primary/20"
                   }`}
                   onClick={() => setBtnNum(2)}
                 >
@@ -244,8 +244,8 @@ export default function PriceTable() {
 
               <div className="price">
                 <button
-                  className={`w-full py-3 px-2 xs:p-3 rounded-md text-[0.95] ex:text-base transition-all duration-300 leading-[0.7] whitespace-nowrap border-2 ${
-                    btnNum === 3 ? "border-all" : "border-primary"
+                  className={`w-full py-3 px-2 xs:p-3 rounded-mdg text-[0.95] ex:text-base transition-all duration-300 leading-[0.7] whitespace-nowrap border-b-2 ${
+                    btnNum === 3 ? "border-primary" : "border-primary/20"
                   }`}
                   onClick={() => setBtnNum(3)}
                 >
@@ -257,8 +257,8 @@ export default function PriceTable() {
               <div className="price-wrapper col-span-full flex justify-center items-center gap-2 xs:gap-4">
                 <div className="price">
                   <button
-                    className={`w-full py-3 px-2 xs:p-3 rounded-md text-[0.95] ex:text-base transition-all duration-300 leading-[0.7] whitespace-nowrap border-2 ${
-                      btnNum === 4 ? "border-all" : "border-primary"
+                    className={`w-full py-3 px-2 xs:p-3 rounded-mdg text-[0.95] ex:text-base transition-all duration-300 leading-[0.7] whitespace-nowrap border-b-2 ${
+                      btnNum === 4 ? "border-primary" : "border-primary/20"
                     }`}
                     onClick={() => setBtnNum(4)}
                   >
@@ -268,8 +268,8 @@ export default function PriceTable() {
 
                 <div className="price">
                   <button
-                    className={`w-full py-3 px-2 xs:p-3 rounded-md text-[0.95] ex:text-base transition-all duration-300 leading-[0.7] whitespace-nowrap border-2 ${
-                      btnNum === 5 ? "border-all" : "border-primary"
+                    className={`w-full py-3 px-2 xs:p-3 rounded-mdg text-[0.95] ex:text-base transition-all duration-300 leading-[0.7] whitespace-nowrap border-b-2 ${
+                      btnNum === 5 ? "border-primary" : "border-primary/20"
                     }`}
                     onClick={() => setBtnNum(5)}
                   >
@@ -297,7 +297,7 @@ export default function PriceTable() {
             slideShadows: true,
           }}
           modules={[EffectCoverflow, Pagination]}
-          className="evaluation-slider mt-10 flex flex-wrap gap-8 md:gap-10 justify-center md:justify-between items-center w-full"
+          className="evaluation-slider mt-[3.25rem] flex flex-wrap gap-8 md:gap-10 justify-center md:justify-between items-center w-full"
         >
           <SwiperSlide>
             <div className="phase1 pt-2 pb-6 item grid gap-3 border border-primary/30 rounded-2xl">
@@ -492,10 +492,10 @@ export default function PriceTable() {
           </SwiperSlide>
         </Swiper>
 
-        <div className="btn flex w-full justify-center mt-14">
+        <div className="btn flex w-full justify-center mt-[4.4rem]">
           <Link
             to="/login"
-            className="capitalize font-Montserrat text-xs font-bold py-3 px-12 bg-primary/80 hover:bg-primary transition-all duration-200 rounded-3xl text-dark"
+            className="capitalize font-Montserrat text-xs font-bold py-4 px-16 bg-primary/80 hover:bg-primary transition-all duration-200 rounded-3xl text-dark"
           >
             GET STARTED NOW
           </Link>

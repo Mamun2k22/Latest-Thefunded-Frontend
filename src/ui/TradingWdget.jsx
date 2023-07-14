@@ -129,8 +129,8 @@ export default function TradingWdget() {
   ];
 
   return (
-    <div className="ticker-widget pt-12 sm:pt-16 relative z-10 ">
-      <div className="container">
+    <div className="ticker-widget pt-12 sm:pt-16 relative z-10">
+      <div className="max-w-[72rem] m-auto sm:p-10">
         <div className="wrapper backdrop-blur-3xl bg-main-bg/30">
           <TickerTape
             colorTheme="dark"

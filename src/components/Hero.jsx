@@ -36,7 +36,7 @@ export default function Hero() {
                   <div className="btn flex md:justify-end font-extrabold flex-shrink-0">
                     <Link
                       to="/login"
-                      className="capitalize bg-primary/20 md:bg-transparent font-base flex justify-center items-center py-3 md:py-1 px-7 sm:px-9 md:border-2 border-white rounded-xl whitespace-nowrap font-codePro font-light text-base md:text-[0.8rem] w-full"
+                      className="capitalize bg-primary/20 md:bg-transparent font-base flex justify-center items-center py-3 md:py-1 px-7 sm:px-9 md:border-2 text-white/70 hover:text-white border-white/70 hover:border-white transition-all duration-200 rounded-xl whitespace-nowrap font-codePro font-light text-base md:text-[0.8rem] w-full"
                     >
                       get started now
                     </Link>

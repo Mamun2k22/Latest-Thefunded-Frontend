@@ -156,7 +156,7 @@ export default function Navbar() {
               <li className="flex mt-4 pl-6">
                 <Link
                   to="/login"
-                  className="flex justify-center items-center font-Montserrat font-semibold text-main-bg bg-primary rounded-lg w-36 h-10"
+                  className="flex justify-center items-center font-Montserrat font-semibold text-main-bg bg-primary rounded-2xl w-36 h-10"
                 >
                   Client Area
                 </Link>

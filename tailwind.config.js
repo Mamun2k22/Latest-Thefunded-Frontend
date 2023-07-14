@@ -16,8 +16,6 @@ module.exports = {
         all: "#C381FC",
         toggle: "#090913",
         dark: "#0c0c18",
-        grn: "#00BF63",
-        blu: "#38B6FF",
         wht: "#dddddd",
         gry: "#a6a6a6",
       },

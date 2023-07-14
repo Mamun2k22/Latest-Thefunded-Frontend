@@ -18,7 +18,7 @@ export default function Evaluation() {
   return (
     <section className="evaluation relative md:max-w-[90%] md:m-auto pb-10 md:pb-0 pt-12 sm:pt-16">
       <div className="container relative">
-        <div className="wrapper z-10 relative">
+        <div className="wrapper relative z-40">
           <div className="heading flex flex-col justify-start items-start">
             <MotionX delay={0.1}>
               <h2 className="font-medium text-2xl xs:text-[1.7rem] tracking-tight text-wht-gradient">
@@ -41,7 +41,7 @@ export default function Evaluation() {
             </MotionX>
           </div>
           {/* Desktop version */}
-          <div className="cards hidden lg:flex gap-8 md:gap-12 justify-center items-center mt-10">
+          <div className="cards relative z-30 hidden lg:flex gap-8 md:gap-12 justify-center items-center mt-10">
             {/* card */}
             <MotionY
               delay={0.4}
@@ -89,7 +89,7 @@ export default function Evaluation() {
               <div className="card-bottom mt-4 flex justify-center items-center text-center">
                 <Link
                   to="/login"
-                  className="uppercase font-Montserrat text-xs font-bold py-2 px-8 border-primary border-4 rounded-md"
+                  className="uppercase font-Montserrat text-xs font-bold py-2 px-8 border-primary/50 hover:border-primary transition-all duration-200 border-4 rounded-md"
                 >
                   get started now
                 </Link>
@@ -141,7 +141,7 @@ export default function Evaluation() {
               <div className="card-bottom mt-4 flex justify-center items-center text-center">
                 <Link
                   to="/login"
-                  className="uppercase font-Montserrat text-xs font-bold py-2 px-8 border-primary border-4 rounded-md"
+                  className="uppercase font-Montserrat text-xs font-bold py-2 px-8 border-primary/50 hover:border-primary transition-all duration-200 border-4 rounded-md"
                 >
                   get started now
                 </Link>
@@ -186,7 +186,7 @@ export default function Evaluation() {
                   Overall Loss
                 </p>
                 <p className="text-base font-light font-Montserrat">
-                  Trading Period -
+                  Trading Period{" "}
                   <span className="font-bold capitalize text-base">
                     Indefinite
                   </span>
@@ -199,7 +199,7 @@ export default function Evaluation() {
               <div className="card-bottom mt-4 flex justify-center items-center text-center">
                 <Link
                   to="/login"
-                  className="uppercase font-Montserrat text-xs font-bold py-2 px-8 border-primary border-4 rounded-md"
+                  className="uppercase font-Montserrat text-xs font-bold py-2 px-8 border-primary/50 hover:border-primary transition-all duration-200 border-4 rounded-md"
                 >
                   get started now
                 </Link>

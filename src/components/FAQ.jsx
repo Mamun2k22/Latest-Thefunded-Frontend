@@ -71,13 +71,7 @@ export default function FAQ() {
 
       {/* cirlce */}
       <img
-        className="cirlce absolute -bottom-[18rem] -right-[15rem]  w-[40rem] rotate-[140deg] opacity-[0.2]"
-        src={circle}
-        alt="circle"
-      />
-      {/* cirlce */}
-      <img
-        className="cirlce sm:hidden absolute -top-[0%] -left-[50%]  w-[40rem] rotate-[140deg] opacity-[0.15]"
+        className="cirlce absolute -bottom-[18rem] -right-[15rem]  w-[40rem] rotate-[140deg] opacity-[0.05]"
         src={circle}
         alt="circle"
       />

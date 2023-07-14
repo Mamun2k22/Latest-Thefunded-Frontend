@@ -1,5 +1,5 @@
 import MotionX from "../ui/MotionX";
-import { discord, discordGray, mobile, circle } from "../ui/images";
+import { discord, mobile, circle } from "../ui/images";
 
 export default function Discord() {
   return (
@@ -81,7 +81,7 @@ export default function Discord() {
 
           {/* cirlce */}
           <img
-            className="cirlce absolute -top-[70%] -left-[70%] !max-w-[100rem]  w-[100rem] rotate-[55deg] opacity-[0.1]"
+            className="cirlce absolute -top-[70%] -left-[70%] !max-w-[100rem]  w-[100rem] rotate-[55deg] opacity-[0.05] sm:opacity-[0.1]"
             src={circle}
             alt=""
           />
@@ -89,7 +89,7 @@ export default function Discord() {
       </div>
       {/* cirlce */}
       <img
-        className="cirlce absolute -bottom-[25rem] -right-[6%] !max-w-[100rem]  w-[100rem] rotate-[80deg] opacity-[0.05]"
+        className="cirlce absolute hidden sm:block -bottom-[25rem] -right-[6%] !max-w-[100rem]  w-[100rem] rotate-[80deg] opacity-[0.05]"
         src={circle}
         alt=""
       />

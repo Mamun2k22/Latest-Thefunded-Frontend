@@ -1,7 +1,6 @@
 import mainLogo from "../assets/images/logo.png";
 import dashboard from "../assets/images/dashboard.webp";
 import discord from "../assets/images/discord.svg";
-import discordGray from "../assets/images/discord-gray.png";
 import arrow from "../assets/images/arrow.svg";
 import globe from "../assets/images/globe.png";
 import footerBg from "../assets/images/footer-logo.png";
@@ -13,9 +12,6 @@ import googlePay from "../assets/images/google-pay.png";
 import btcPay from "../assets/images/btc-pay.png";
 import tick from "../assets/images/tick.svg";
 import mobile from "../assets/images/discord-mobile.png";
-import shadow from "../assets/images/drop-shadow.png";
-import shadowGray from "../assets/images/shadow-gray.png";
-
 
 // Dashboard Images
 import authorTwo from "../assets/images/dashboard/author/author-2.jpeg";
@@ -47,14 +43,14 @@ import jpy from "../assets/images/dashboard/flug/JPY.svg";
 import nzd from "../assets/images/dashboard/flug/NZD.svg";
 import usd from "../assets/images/dashboard/flug/USD.svg";
 
-// import  from "../assets/images/dashboard/";
-// import  from "../assets/images/dashboard/";
+// trader
+import metaTraderFive from "../assets/images/meta-trader-5.png";
+import scopMarkets from "../assets/images/scop-markets.svg";
 
 export {
   mainLogo,
   dashboard,
   discord,
-  discordGray,
   arrow,
   globe,
   footerBg,
@@ -66,8 +62,6 @@ export {
   tick,
   mobile,
   favicon,
-  shadow,
-  shadowGray,
 
   // Dashboard
   authorTwo,
@@ -98,4 +92,8 @@ export {
   jpy,
   nzd,
   usd,
+
+  // Trader
+  metaTraderFive,
+  scopMarkets,
 };

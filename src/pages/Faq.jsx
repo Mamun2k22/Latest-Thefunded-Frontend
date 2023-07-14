@@ -8,11 +8,11 @@ import { BsTwitter, BsInstagram, BsDiscord } from "react-icons/bs";
 import FaqCollaps from "../components/FaqCollaps";
 
 export default function Faq() {
-  const [option, setOption] = useState("Insight");
+  const [option, setOption] = useState("Rules");
   const { pathname } = useLocation();
 
   const collapsInfo = {
-    Insight: [
+    Rules: [
       [
         "Do you offer <span>Leverage</span>?",
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
@@ -39,48 +39,9 @@ export default function Faq() {
       ],
     ],
 
-    Rules: [
-      [
-        "Can I have more than one challenge?",
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-      ],
-      [
-        "Is there any restrictions on trading?",
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-      ],
-    ],
-
-    General: [
-      [
-        "Do you offer Leverage?",
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-      ],
-      [
-        "Can I hold trades over the weekend?",
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-      ],
-
-      [
-        "Can I have more than one challenge?",
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-      ],
-      [
-        "Is there any restrictions on trading?",
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-      ],
-    ],
-
     Evaluation: [
       [
-        "Do you offer Leverage?",
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-      ],
-      [
-        "Can I hold trades over the weekend?",
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-      ],
-      [
-        "Can I hold trades over the weekend?",
+        "Can I have more than one challenge?",
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
       ],
       [
@@ -88,24 +49,38 @@ export default function Faq() {
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
       ],
     ],
-    Technical: [
+
+    TFH: [
       [
         "Do you offer Leverage?",
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+      ],
+      [
+        "Can I hold trades over the weekend?",
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
       ],
 
       [
+        "Can I have more than one challenge?",
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+      ],
+      [
         "Is there any restrictions on trading?",
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
       ],
-      [
-        "Can I have more than one challenge?",
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-      ],
     ],
+
     Billing: [
       [
-        "Can I have more than one challenge?",
+        "Do you offer Leverage?",
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+      ],
+      [
+        "Can I hold trades over the weekend?",
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+      ],
+      [
+        "Can I hold trades over the weekend?",
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
       ],
       [
@@ -122,8 +97,8 @@ export default function Faq() {
     <>
       <Navbar />
       <section className="faq relative">
-        <div className="container z-10 relative">
-          <div className="wrapper pb-24 sm:pb-36 md:pb-44 w-full grid gap-16 xs:gap-20 md:gap-32">
+        <div className="container z-20 relative">
+          <div className="wrapper z-20 relative pb-24 sm:pb-36 md:pb-44 w-full grid gap-16 xs:gap-20 md:gap-32">
             {/* Top content */}
             <div className="top-content py-10 md:py-20">
               <div className="header grid relative z-10">
@@ -139,35 +114,13 @@ export default function Faq() {
                     {/* option */}
                     <div
                       className={`option py-2 sm:py-3 md:py-[1rem] rounded-xl  border-[3px] bg-main-bg/80 backdrop-blur-3xl cursor-pointer relative transition-all duration-200 before:transition-all before:duration-200 ${
-                        option === "Insight"
-                          ? "border-primary/50 before:opacity-100"
-                          : "border-transparent before:opacity-0"
-                      }`}
-                      onClick={() => setOption("Insight")}
-                    >
-                      <h5 className="px-3 sm:px-5">Our Insight</h5>
-                    </div>
-                    {/* option */}
-                    <div
-                      className={`option py-2 sm:py-3 md:py-[1rem] rounded-xl  border-[3px] bg-main-bg/80 backdrop-blur-3xl cursor-pointer relative transition-all duration-200 before:transition-all before:duration-200 ${
                         option === "Rules"
                           ? "border-primary/50 before:opacity-100"
                           : "border-transparent before:opacity-0"
                       }`}
                       onClick={() => setOption("Rules")}
                     >
-                      <h5 className="px-3 sm:px-5">Trading Rules</h5>
-                    </div>
-                    {/* option */}
-                    <div
-                      className={`option py-2 sm:py-3 md:py-[1rem] rounded-xl  border-[3px] bg-main-bg/80 backdrop-blur-3xl cursor-pointer relative transition-all duration-200 before:transition-all before:duration-200 ${
-                        option === "General"
-                          ? "border-primary/50 before:opacity-100"
-                          : "border-transparent before:opacity-0"
-                      }`}
-                      onClick={() => setOption("General")}
-                    >
-                      <h5 className="px-3 sm:px-5">General Information</h5>
+                      <h5 className="px-3 sm:px-5">Rules</h5>
                     </div>
                     {/* option */}
                     <div
@@ -178,18 +131,18 @@ export default function Faq() {
                       }`}
                       onClick={() => setOption("Evaluation")}
                     >
-                      <h5 className="px-3 sm:px-5">Evaluation & Funding</h5>
+                      <h5 className="px-3 sm:px-5">Evaluation Program</h5>
                     </div>
                     {/* option */}
                     <div
                       className={`option py-2 sm:py-3 md:py-[1rem] rounded-xl  border-[3px] bg-main-bg/80 backdrop-blur-3xl cursor-pointer relative transition-all duration-200 before:transition-all before:duration-200 ${
-                        option === "Technical"
+                        option === "TFH"
                           ? "border-primary/50 before:opacity-100"
                           : "border-transparent before:opacity-0"
                       }`}
-                      onClick={() => setOption("Technical")}
+                      onClick={() => setOption("TFH")}
                     >
-                      <h5 className="px-3 sm:px-5">Technical Help</h5>
+                      <h5 className="px-3 sm:px-5">TFH Funded</h5>
                     </div>
                     {/* option */}
                     <div
@@ -200,7 +153,7 @@ export default function Faq() {
                       }`}
                       onClick={() => setOption("Billing")}
                     >
-                      <h5 className="px-3 sm:px-5">Oders & Billing</h5>
+                      <h5 className="px-3 sm:px-5">Order and Billing</h5>
                     </div>
                   </div>
                   {/* cirlce */}
@@ -213,13 +166,17 @@ export default function Faq() {
                 {/* right */}
                 <div className="right faq-collaps md:col-span-9 flex flex-col gap-4 z-10 relative">
                   {collapsInfo[option].map((item, index) => (
-                    <FaqCollaps key={index} heading={item[0]} para={item[1]} />
+                    <FaqCollaps
+                      key={index + option}
+                      heading={item[0]}
+                      para={item[1]}
+                    />
                   ))}
                 </div>
               </div>
             </div>
             {/* bottom-cotent */}
-            <div className="flex items-center z-10 relative">
+            <div className="flex items-center">
               <div className="content grid md:grid-cols-3 gap-10  w-full">
                 {/* left */}
                 <div className="left md:col-span-1 break-all ">

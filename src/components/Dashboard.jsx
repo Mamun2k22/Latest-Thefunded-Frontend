@@ -48,7 +48,13 @@ export default function Dashboard() {
 
       {/* cirlce */}
       <img
-        className="cirlce absolute -top-[24rem] sm:-top-[20rem] -left-[20%] sm:-left-[20rem]  w-[70rem] rotate-[80deg] opacity-10 md:opacity-[0.1]"
+        className="cirlce absolute  -top-[15%] left-[20%]  w-[40rem] rotate-[80deg] opacity-[0.1] "
+        src={circle}
+        alt="circle"
+      />
+      {/* cirlce */}
+      <img
+        className="cirlce absolute -top-[24rem] sm:-top-[20rem] -left-[20%] sm:-left-[20rem]  w-[70rem] rotate-[80deg] opacity-[0.04] sm:opacity-[0.05]"
         src={circle}
         alt="circle"
       />

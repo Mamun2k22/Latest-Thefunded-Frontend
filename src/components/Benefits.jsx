@@ -1,4 +1,4 @@
-import { circle } from "../ui/images";
+import { circle, metaTraderFive, scopMarkets } from "../ui/images";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import MotionX from "../ui/MotionX";
@@ -16,7 +16,7 @@ export default function Benefits() {
   return (
     <section className="benefits relative md:m-auto pt-20 sm:pt-24">
       <div className="container">
-        <div className="wrapper grid gap-8 relative z-10">
+        <div className="wrapper grid gap-8 relative z-30">
           <div className="heading z-10 relative flex flex-col justify-start items-start">
             <MotionX delay={0.1}>
               <h2 className="font-medium text-2xl xs:text-[1.7rem] tracking-tight text-wht-gradient">
@@ -464,17 +464,17 @@ export default function Benefits() {
                     className="flex flex-wrap gap-8 md:gap-10 justify-center items-center w-full"
                   >
                     {/* item */}
-                    <SwiperSlide className="item flex flex-col gap-8 justify-center items-center text-base sm:text-lg bg-main-bg/[70%] border border-all/20 rounded-2xl py-6 px-4 md:border-none max-w-[14rem] overflow-hidden">
+                    <SwiperSlide className="item flex flex-col gap-8 justify-center items-center text-base sm:text-lg bg-main-bg/[70%] border border-all/20 rounded-3xl py-5 px-4 md:border-none max-w-[14rem] overflow-hidden">
                       {/* top */}
                       <div className="top text-center">
                         <h6 className="text-sm font-extralight">Balance</h6>
-                        <h5 className="font-codePro text-[1.1rem] mt-1">
+                        <h5 className="font-codeProBold text-[1.1rem] mt-1">
                           $5,000
                         </h5>
                       </div>
                       {/* Bottom */}
                       <div className="bottom">
-                        <h5 className="font-codePro text-[1.1rem]">
+                        <h5 className="font-codeProBold text-[1.1rem]">
                           $100.00 /{" "}
                           <span className=" font-codePro font-extralight text-base">
                             Month
@@ -486,17 +486,17 @@ export default function Benefits() {
                       </div>
                     </SwiperSlide>
                     {/* item */}
-                    <SwiperSlide className="item flex flex-col gap-8 justify-center items-center text-base sm:text-lg bg-main-bg/[70%] border border-all/20 rounded-2xl py-6 px-4 md:border-none max-w-[14rem] overflow-hidden">
+                    <SwiperSlide className="item flex flex-col gap-8 justify-center items-center text-base sm:text-lg bg-main-bg/[70%] border border-all/20 rounded-3xl py-5 px-4 md:border-none max-w-[14rem] overflow-hidden">
                       {/* top */}
                       <div className="top text-center">
                         <h6 className="text-sm font-extralight">Balance</h6>
-                        <h5 className="font-codePro text-[1.1rem] mt-1">
+                        <h5 className="font-codeProBold text-[1.1rem] mt-1">
                           $10,000
                         </h5>
                       </div>
                       {/* Bottom */}
                       <div className="bottom">
-                        <h5 className="font-codePro text-[1.1rem]">
+                        <h5 className="font-codeProBold text-[1.1rem]">
                           $100.00 /{" "}
                           <span className=" font-codePro font-extralight text-base">
                             Month
@@ -508,17 +508,17 @@ export default function Benefits() {
                       </div>
                     </SwiperSlide>
                     {/* item */}
-                    <SwiperSlide className="item flex flex-col gap-8 justify-center items-center text-base sm:text-lg bg-main-bg/[70%] border border-all/20 rounded-2xl py-6 px-4 md:border-none max-w-[14rem] overflow-hidden">
+                    <SwiperSlide className="item flex flex-col gap-8 justify-center items-center text-base sm:text-lg bg-main-bg/[70%] border border-all/20 rounded-3xl py-5 px-4 md:border-none max-w-[14rem] overflow-hidden">
                       {/* top */}
                       <div className="top text-center">
                         <h6 className="text-sm font-extralight">Balance</h6>
-                        <h5 className="font-codePro text-[1.1rem] mt-1">
+                        <h5 className="font-codeProBold text-[1.1rem] mt-1">
                           $25,000
                         </h5>
                       </div>
                       {/* Bottom */}
                       <div className="bottom">
-                        <h5 className="font-codePro text-[1.1rem]">
+                        <h5 className="font-codeProBold text-[1.1rem]">
                           $250.00 /{" "}
                           <span className="font-codePro font-extralight text-base">
                             Month
@@ -530,17 +530,17 @@ export default function Benefits() {
                       </div>
                     </SwiperSlide>
                     {/* item */}
-                    <SwiperSlide className="item flex flex-col gap-8 justify-center items-center text-base sm:text-lg bg-main-bg/[70%] border border-all/20 rounded-2xl py-6 px-4 md:border-none max-w-[14rem] overflow-hidden">
+                    <SwiperSlide className="item flex flex-col gap-8 justify-center items-center text-base sm:text-lg bg-main-bg/[70%] border border-all/20 rounded-3xl py-5 px-4 md:border-none max-w-[14rem] overflow-hidden">
                       {/* top */}
                       <div className="top text-center">
                         <h6 className="text-sm font-extralight">Balance</h6>
-                        <h5 className="font-codePro text-[1.1rem] mt-1">
+                        <h5 className="font-codeProBold text-[1.1rem] mt-1">
                           $50,000
                         </h5>
                       </div>
                       {/* Bottom */}
                       <div className="bottom">
-                        <h5 className="font-codePro text-[1.1rem]">
+                        <h5 className="font-codeProBold text-[1.1rem]">
                           $500.00 /{" "}
                           <span className="font-codePro font-extralight text-base">
                             Month
@@ -552,17 +552,17 @@ export default function Benefits() {
                       </div>
                     </SwiperSlide>
                     {/* item */}
-                    <SwiperSlide className="item flex flex-col gap-8 justify-center items-center text-base sm:text-lg bg-main-bg/[70%] border border-all/20 rounded-2xl py-6 px-4 md:border-none max-w-[14rem] overflow-hidden">
+                    <SwiperSlide className="item flex flex-col gap-8 justify-center items-center text-base sm:text-lg bg-main-bg/[70%] border border-all/20 rounded-3xl py-5 px-4 md:border-none max-w-[14rem] overflow-hidden">
                       {/* top */}
                       <div className="top text-center">
                         <h6 className="text-sm font-extralight">Balance</h6>
-                        <h5 className="font-codePro text-[1.1rem] mt-1">
+                        <h5 className="font-codeProBold text-[1.1rem] mt-1">
                           $100,000
                         </h5>
                       </div>
                       {/* Bottom */}
                       <div className="bottom">
-                        <h5 className="font-codePro text-[1.1rem]">
+                        <h5 className="font-codeProBold text-[1.1rem]">
                           $1000.00 /{" "}
                           <span className="font-codePro font-extralight text-base">
                             Month
@@ -575,6 +575,24 @@ export default function Benefits() {
                     </SwiperSlide>
                   </Swiper>
                 </div>
+              </div>
+            </div>
+
+            {/* Tranders */}
+            <div className="tranders grid xs:flex justify-center items-center gap-4 xs:gap-8 sm:gap-16 w-full mt-20">
+              <div className="img">
+                <img
+                  className="max-w-[15rem] w-full opacity-[0.87]"
+                  src={scopMarkets}
+                  alt="scop-markets"
+                />
+              </div>
+              <div className="img">
+                <img
+                  className="max-w-[13rem] w-full opacity-[0.87]"
+                  src={metaTraderFive}
+                  alt="meta-trader-5"
+                />
               </div>
             </div>
           </div>
