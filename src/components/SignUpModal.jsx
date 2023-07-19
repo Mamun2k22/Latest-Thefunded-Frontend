@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 import { arrow } from "../ui/images";
 import { Country } from "country-state-city";
 import { Link } from "react-router-dom";
 import { RxCross1 } from "react-icons/rx";
-
+import { useForm } from "react-hook-form";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 // eslint-disable-next-line react/prop-types
 export default function SignUpModal({ props }) {
   const [registerModal, setRegisterModal] = props;
@@ -18,13 +21,52 @@ export default function SignUpModal({ props }) {
   const [accept, setAccept] = useState(false);
   const allCountry = Country.getAllCountries();
   const [buttonState, setbuttonState] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(null);
+  const [successMessage, setSuccessMessage] = useState(null);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset
+  } = useForm();
+
+
+const handleSignUp = async (data) => {
+  console.log(data.lastName)
+  const datas = {
+     title,
+     firstName,
+     lastName,
+     password,
+     confirmPassword,
+     countrySelect,
+     email,
+  } 
+  // const { password, confirmPassword } = data;
+  console.log(datas)
+  if (datas.password === datas.confirmPassword) {
+    setSuccessMessage("Data sent successfully!");
+  } else {
+    
+    setErrorMessage("Passwords do not match.");
+    return
+  }
+    try {
+      console.log(data)
+      const response = await axios.post("http://localhost:5000/register", data);
+      
+
+      toast.success("Email sent to you for verification");
+
+      reset();
+      // (buttonState ? setRegisterModal(false) : "")
+    } catch (error) {
+      console.log(error?.response?.data);
+    }
   };
 
   useEffect(() => {
-    console.log(accept, agree);
     if (
       firstName &&
       lastName &&
@@ -69,8 +111,9 @@ export default function SignUpModal({ props }) {
         >
           {/* content */}
           <form
+          onSubmit={handleSubmit(handleSignUp)}
             className="grid gap-6 relative z-10 rounded-xl border-primary"
-            onSubmit={(e) => handleSubmit(e)}
+            
           >
             <div className="heading grid gap-3 justify-start items-center">
               <h1 className="text-start text-xl xs:text-[1.8rem] font-medium">
@@ -105,6 +148,7 @@ export default function SignUpModal({ props }) {
 
                       {/* select */}
                       <select
+                       {...register("title")}
                         id="title"
                         name="title"
                         autoFocus={true}
@@ -120,9 +164,10 @@ export default function SignUpModal({ props }) {
                   {/* First name */}
                   <div className="first-name col-span-4">
                     <input
+                    {...register("firstName")}
                       onChange={(e) => setFirstName(e.target.value)}
                       value={firstName}
-                      name="first-name"
+                      name="firstName"
                       className="email w-full focus:outline-primary/70 border-none outline outline-2 outline-primary/30  bg-transparent py-2 sm:py-2.5 px-6 rounded-2xl transition-all duration-200"
                       type="text"
                       placeholder="First Name"
@@ -132,9 +177,10 @@ export default function SignUpModal({ props }) {
                 {/* Last name */}
                 <div className="last-name">
                   <input
+                  {...register("lastName")}
                     onChange={(e) => setLastName(e.target.value)}
                     value={lastName}
-                    name="last-name"
+                    name="lastName"
                     className="email w-full focus:outline-primary/70 border-none outline outline-2 outline-primary/30  bg-transparent py-2 sm:py-2.5 px-6 rounded-2xl transition-all duration-200"
                     type="text"
                     placeholder="Last Name"
@@ -143,6 +189,7 @@ export default function SignUpModal({ props }) {
                 {/* Email */}
                 <div className="email">
                   <input
+                      {...register("email")}
                     onChange={(e) => setEmail(e.target.value)}
                     value={email}
                     name="email"
@@ -164,6 +211,7 @@ export default function SignUpModal({ props }) {
                       alt="arrow"
                     />
                     <select
+                    {...register("country")}
                       onChange={(e) => setCountrySelect(e.target.value)}
                       value={countrySelect}
                       id="country"
@@ -184,6 +232,7 @@ export default function SignUpModal({ props }) {
                 {/* Password */}
                 <div className="password">
                   <input
+                   {...register("password")}
                     onChange={(e) => setPassword(e.target.value)}
                     value={password}
                     name="password"
@@ -195,9 +244,10 @@ export default function SignUpModal({ props }) {
                 {/* Confirm Password */}
                 <div className="confirm-pass">
                   <input
+                   {...register("confirmPassword")}
                     onChange={(e) => setConfirmPassword(e.target.value)}
                     value={confirmPassword}
-                    name="confirm-pass"
+                    name="confirmPassword"
                     className="email w-full focus:outline-primary/70 border-none outline outline-2 outline-primary/30  bg-transparent py-2 sm:py-2.5 px-6 rounded-2xl transition-all duration-200"
                     type="password"
                     placeholder="Confirm Password"
@@ -265,8 +315,9 @@ export default function SignUpModal({ props }) {
               <div className="login-btn mt-6 grid justify-center items-center w-full">
                 {/* sign up  btn */}
                 <button
-                  onClick={() => (buttonState ? setRegisterModal(false) : "")}
-                  className={`py-2.5 sm:py-3 px-16 sm:px-20 text-main-bg  transition-all duration-300 rounded-3xl font-Montserrat font-semibold ${
+                type="submit"
+                onClick={() => handleSubmit(handleSignUp)}
+                className={`py-2.5 sm:py-3 px-16 sm:px-20 text-main-bg  transition-all duration-300 rounded-3xl font-Montserrat font-semibold ${
                     buttonState
                       ? "hover:bg-primary bg-primary/80"
                       : " !cursor-default bg-primary/20"
@@ -277,6 +328,8 @@ export default function SignUpModal({ props }) {
               </div>
             </div>
           </form>
+
+          <ToastContainer position="top-center" autoClose={3000} hideProgressBar={true} />
           {/* cross */}
           <div className="cross" onClick={() => setRegisterModal(false)}>
             <RxCross1 className="absolute cursor-pointer text-xl sm:text-2xl text-dim-gray right-4 top-4" />

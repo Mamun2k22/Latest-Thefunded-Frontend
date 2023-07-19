@@ -1,15 +1,16 @@
 import Navbar from "../components/Navbar";
+
+
 import Footer from "../components/Footer";
 import { arrow, circle } from "../ui/images";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
-import { Country } from "country-state-city";
-
 export default function Registration() {
   const { pathname } = useLocation();
   const allCountry = Country.getAllCountries();
+ 
+  
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -20,9 +21,8 @@ export default function Registration() {
       <section className="registration">
         <div className="container relative">
           <div className="wrapper flex justify-center items-center min-h-[40vh] pt-20 sm:mb-20 pb-24 sm:pb-36">
-            <form
+            <form 
               className="grid gap-6 sm:gap-8 md:gap-10 p-7 sm:p-9 md:p-12 relative z-10 rounded-xl bg-primary/[5%] max-w-[35rem]  border-primary"
-       
             >
               <div className="heading flex justify-center items-center">
                 <h1 className="text-center text-xl xs:text-2xl sm:text-3xl px-4 sm:px-8">
@@ -39,6 +39,7 @@ export default function Registration() {
                     alt="arrow"
                   />
                   <select
+                  {...register("title")}
                     id="country"
                     name="country"
                     className="form-control w-full focus:outline-primary/70 border-none outline outline-2 outline-primary/30 py-2 sm:py-2.5 md:py-3 px-6 rounded-md transition-all duration-200 bg-[#13121f]"
@@ -54,15 +55,16 @@ export default function Registration() {
               {/* First name */}
               <div className="first-name">
                 <input
+                type="text" {...register("FirstName")}
                   name="first-name"
                   className="email w-full focus:outline-primary/70 border-none outline outline-2 outline-primary/30  bg-transparent py-2 sm:py-2.5 md:py-3 px-6 rounded-md transition-all duration-200"
-                  type="text"
                   placeholder="First Name"
                 />
               </div>
               {/* Last name */}
               <div className="last-name">
                 <input
+                 {...register("lastName")}
                   name="last-name"
                   className="email w-full focus:outline-primary/70 border-none outline outline-2 outline-primary/30  bg-transparent py-2 sm:py-2.5 md:py-3 px-6 rounded-md transition-all duration-200"
                   type="text"
@@ -72,6 +74,9 @@ export default function Registration() {
               {/* Email */}
               <div className="email">
                 <input
+                 {...register("email", {
+                  required: "email address is required"
+                })}
                   name="email"
                   className="email w-full focus:outline-primary/70 border-none outline outline-2 outline-primary/30  bg-transparent py-2 sm:py-2.5 md:py-3 px-6 rounded-md transition-all duration-200"
                   type="email"
@@ -81,30 +86,40 @@ export default function Registration() {
               {/* Mobile */}
               <div className="mobile">
                 <input
+                   {...register("number", {
+                    required: "number is required"
+                  })}
                   name="mobile"
                   className="email w-full focus:outline-primary/70 border-none outline outline-2 outline-primary/30  bg-transparent py-2 sm:py-2.5 md:py-3 px-6 rounded-md transition-all duration-200 appearance-none m-0"
                   type="number"
                   placeholder="Mobile"
                 />
               </div>
-              {/* Password */}
-              <div className="password">
-                <input
-                  name="password"
-                  className="email w-full focus:outline-primary/70 border-none outline outline-2 outline-primary/30  bg-transparent py-2 sm:py-2.5 md:py-3 px-6 rounded-md transition-all duration-200"
-                  type="password"
-                  placeholder="Password"
-                />
-              </div>
-              {/* Confirm Password */}
-              <div className="confirm-pass">
-                <input
-                  name="confirm-pass"
-                  className="email w-full focus:outline-primary/70 border-none outline outline-2 outline-primary/30  bg-transparent py-2 sm:py-2.5 md:py-3 px-6 rounded-md transition-all duration-200"
-                  type="password"
-                  placeholder="Confirm Password"
-                />
-              </div>
+             {/* Password */}
+      <div className="password">
+        <input
+          {...register("password", {
+            required: "Password is required",
+          })}
+          name="password"
+          className="email w-full focus:outline-primary/70 border-none outline outline-2 outline-primary/30  bg-transparent py-2 sm:py-2.5 md:py-3 px-6 rounded-md transition-all duration-200"
+          type="password"
+          placeholder="Password"
+        />
+      </div>
+                   {/* Confirm Password */}
+      <div className="confirm-pass">
+        <input
+          {...register("confirmPassword", {
+            required: "Confirm password is required",
+          })}
+          name="confirmPassword"
+          className="email w-full focus:outline-primary/70 border-none outline outline-2 outline-primary/30  bg-transparent py-2 sm:py-2.5 md:py-3 px-6 rounded-md transition-all duration-200"
+          type="password"
+          placeholder="Confirm Password"
+        />
+      </div>
+      {errorMessage && <div className="error">{errorMessage}</div>}
               {/* Country Residence */}
               <div className="country-residence">
                 <div className="wrapper relative">
@@ -115,6 +130,7 @@ export default function Registration() {
                     alt="arrow"
                   />
                   <select
+                   {...register("country")}
                     id="country"
                     name="country"
                     className="form-control w-full focus:outline-primary/70 border-none outline outline-2 outline-primary/30 py-2 sm:py-2.5 md:py-3 px-6 rounded-md transition-all duration-200 bg-[#13121f]"
@@ -232,6 +248,7 @@ export default function Registration() {
                 </div>
               </div>
             </form>
+            <ToastContainer position="top-center" autoClose={3000} hideProgressBar={true} />
           </div>
           {/* cirlce */}
           <img

@@ -38,17 +38,17 @@ export default function TradingOverview() {
                       <div className="grid gap-5 sm:grid-cols-2">
                         <div className="w-full">
                           <div className="p-5 rounded-[15px] bg-main-bg/60 backdrop-blur-3xl card-border">
-                            <p className="text-dark text-[18px] leading-[1.5] tracking-[-0.05px] mb-[20px] dark:text-wht inline-block">
+                            <p className=" text-[18px] leading-[1.5] tracking-[-0.05px] mb-[20px] text-wht inline-block">
                               <div className="mr-1 inline-block font-medium">
                                 Minimum Trading Days
                               </div>
                               <AiOutlineQuestionCircle className=" inline-block" />
                             </p>
-                            <p className="flex flex-wrap items-center justify-between text-dark text-[18px] leading-[1.5] tracking-[-0.05px] mb-[15px] dark:text-wht">
+                            <p className="flex flex-wrap items-center justify-between  text-[18px] leading-[1.5] tracking-[-0.05px] mb-[15px] text-wht">
                               <span>Minimum</span>
                               <span>10 days</span>
                             </p>
-                            <p className="flex flex-wrap items-center justify-between text-dark text-[18px] leading-[1.5] tracking-[-0.05px] mb-[15px] dark:text-wht">
+                            <p className="flex flex-wrap items-center justify-between  text-[18px] leading-[1.5] tracking-[-0.05px] mb-[15px] text-wht">
                               <span>Current Result</span>
                               <span className="text-primary">2 days</span>
                             </p>
@@ -61,17 +61,17 @@ export default function TradingOverview() {
                         </div>
                         <div className="w-full">
                           <div className="p-5 rounded-[15px] bg-main-bg/60 backdrop-blur-3xl card-border">
-                            <p className="text-dark text-[18px] leading-[1.5] tracking-[-0.05px] mb-[20px] dark:text-wht inline-block">
+                            <p className=" text-[18px] leading-[1.5] tracking-[-0.05px] mb-[20px] text-wht inline-block">
                               <div className="mr-1 inline-block font-medium">
                                 Daily Loss Limit
                               </div>
                               <AiOutlineQuestionCircle className=" inline-block" />
                             </p>
-                            <p className="flex flex-wrap items-center justify-between text-dark text-[18px] leading-[1.5] tracking-[-0.05px] mb-[15px] dark:text-wht">
+                            <p className="flex flex-wrap items-center justify-between  text-[18px] leading-[1.5] tracking-[-0.05px] mb-[15px] text-wht">
                               <span>Max. Loss</span>
                               <span>$1250</span>
                             </p>
-                            <p className="flex flex-wrap items-center justify-between text-dark text-[18px] leading-[1.5] tracking-[-0.05px] mb-[15px] dark:text-wht">
+                            <p className="flex flex-wrap items-center justify-between  text-[18px] leading-[1.5] tracking-[-0.05px] mb-[15px] text-wht">
                               <span>Max. Loss recorded</span>
                               <span className="text-primary">$1000</span>
                             </p>
@@ -84,17 +84,17 @@ export default function TradingOverview() {
                         </div>
                         <div className="w-full ">
                           <div className="p-5 rounded-[15px] bg-main-bg/60 backdrop-blur-3xl card-border">
-                            <p className="text-dark text-[18px] leading-[1.5] tracking-[-0.05px] mb-[20px] dark:text-wht inline-block ">
+                            <p className=" text-[18px] leading-[1.5] tracking-[-0.05px] mb-[20px] text-wht inline-block ">
                               <div className="mr-1 inline-block font-medium">
                                 Monthy Loss Limit
                               </div>
                               <AiOutlineQuestionCircle className=" inline-block" />
                             </p>
-                            <p className="flex flex-wrap items-center justify-between text-dark text-[18px] leading-[1.5] tracking-[-0.05px] mb-[15px] dark:text-wht">
+                            <p className="flex flex-wrap items-center justify-between  text-[18px] leading-[1.5] tracking-[-0.05px] mb-[15px] text-wht">
                               <span>Max. Loss</span>
                               <span>$2750</span>
                             </p>
-                            <p className="flex flex-wrap items-center justify-between text-dark text-[18px] leading-[1.5] tracking-[-0.05px] mb-[15px] dark:text-wht">
+                            <p className="flex flex-wrap items-center justify-between  text-[18px] leading-[1.5] tracking-[-0.05px] mb-[15px] text-wht">
                               <span>Max. Loss recorded</span>
                               <span className="text-primary">$1500</span>
                             </p>
@@ -114,7 +114,7 @@ export default function TradingOverview() {
                               <AiOutlineQuestionCircle className=" inline-block" />
                             </div>
                             <div className="content">
-                              <p className="text-dark text-[28px] text-center leading-[1.5] font-medium tracking-[-0.05px] py-[30px] dark:text-wht">
+                              <p className=" text-[28px] text-center leading-[1.5] font-medium tracking-[-0.05px] py-[30px] text-wht">
                                 0%
                               </p>
                             </div>
@@ -131,10 +131,10 @@ export default function TradingOverview() {
                   <div className="card-wrap card-border h-">
                     <h3 className="card-title">Trading Growth Curve</h3>
                     <div className="content grid gap-3">
-                      <div className="flex flex-wrap items-center justify-between text-dark text-[18px] leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                      <div className="flex flex-wrap items-center justify-between  text-[18px] leading-[1.5] tracking-[-0.05px] text-wht">
                         <p className="inline-flex items-center">
                           <svg
-                            className="inline-block w-[20px] h-[20px] fill-dark mr-[5px] dark:fill-white"
+                            className="inline-block w-[20px] h-[20px] mr-[5px] fill-white"
                             focusable="false"
                             viewBox="0 0 24 24"
                             aria-hidden="true"
@@ -143,12 +143,12 @@ export default function TradingOverview() {
                           </svg>
                           Max Permitted Loss
                         </p>
-                        <p className="mt-2 text-dark/90 text-[18px] font-bold py-[6px] px-[16px] rounded-[5px]  dark:bg-primary">
+                        <p className="mt-2 /90 text-[18px] font-bold py-[6px] px-[16px] rounded-[5px]  bg-primary text-main-bg">
                           $1500
                         </p>
                       </div>
 
-                      <div className="flex flex-wrap items-center justify-between text-dark text-[18px] leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                      <div className="flex flex-wrap items-center justify-between  text-[18px] leading-[1.5] tracking-[-0.05px] text-wht">
                         <p className="inline-flex items-center">
                           <svg
                             className="inline-block w-[20px] h-[20px] mr-[5px] fill-white"
@@ -160,12 +160,12 @@ export default function TradingOverview() {
                           </svg>
                           Today&apos;s Permitted Loss
                         </p>
-                        <p className=" mt-2 text-[18px] font-bold py-[6px] px-[16px] rounded-[5px] text-dark/90 bg-primary">
+                        <p className=" mt-2 text-[18px] font-bold py-[6px] px-[16px] rounded-[5px] /90 bg-primary text-main-bg">
                           $750
                         </p>
                       </div>
 
-                      <div className="flex flex-wrap items-center justify-between text-dark text-[18px] leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                      <div className="flex flex-wrap items-center justify-between  text-[18px] leading-[1.5] tracking-[-0.05px] text-wht">
                         <p className="inline-flex items-center">
                           <svg
                             className="inline-block w-[20px] h-[20px] mr-[5px] fill-white"
@@ -177,7 +177,7 @@ export default function TradingOverview() {
                           </svg>
                           Today&apos;s Permitted Loss Will Reset In
                         </p>
-                        <p className=" mt-2 text-[18px] font-bold py-[6px] px-[16px] rounded-[5px] text-dark/90 bg-primary">
+                        <p className=" mt-2 text-[18px] font-bold py-[6px] px-[16px] rounded-[5px] /90 bg-primary text-main-bg">
                           -2:56:29
                         </p>
                       </div>
@@ -193,7 +193,7 @@ export default function TradingOverview() {
                 <div className="content text-center grid gap-4">
                   <div className="stats-list flex flex-wrap items-center justify-between pb-4 border-b border-white/10">
                     <div className="text">
-                      <p className="inline-flex items-center text-dark text-[18px] leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                      <p className="inline-flex items-center  text-[18px] leading-[1.5] tracking-[-0.05px] text-wht">
                         <img
                           className="inline-block w-[20px] h-[20px] mr-[5px]"
                           src={iconEquity}
@@ -201,7 +201,7 @@ export default function TradingOverview() {
                         />
                         Equity
                         <svg
-                          className="inline-block w-[17px] h-[17px] fill-dark ml-[5px] dark:fill-white"
+                          className="inline-block w-[17px] h-[17px] ml-[5px] fill-white"
                           focusable="false"
                           viewBox="0 0 24 24"
                           aria-hidden="true"
@@ -210,14 +210,14 @@ export default function TradingOverview() {
                         </svg>
                       </p>
                     </div>
-                    <div className="numb text-dark text-[18px] leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                    <div className="numb  text-[18px] leading-[1.5] tracking-[-0.05px] text-wht">
                       $58500.00
                     </div>
                   </div>
 
                   <div className="stats-list flex flex-wrap items-center justify-between pb-4 border-b  border-white/10">
                     <div className="text">
-                      <p className="inline-flex items-center text-dark text-[18px] leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                      <p className="inline-flex items-center  text-[18px] leading-[1.5] tracking-[-0.05px] text-wht">
                         <img
                           className="inline-block w-[20px] h-[20px] mr-[5px]"
                           src={iconBalance}
@@ -225,7 +225,7 @@ export default function TradingOverview() {
                         />
                         Balance
                         <svg
-                          className="inline-block w-[17px] h-[17px] fill-dark ml-[5px] dark:fill-white"
+                          className="inline-block w-[17px] h-[17px] ml-[5px] fill-white"
                           focusable="false"
                           viewBox="0 0 24 24"
                           aria-hidden="true"
@@ -234,14 +234,14 @@ export default function TradingOverview() {
                         </svg>
                       </p>
                     </div>
-                    <div className="numb text-dark text-[18px] leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                    <div className="numb  text-[18px] leading-[1.5] tracking-[-0.05px] text-wht">
                       $50000.00
                     </div>
                   </div>
 
                   <div className="stats-list flex flex-wrap items-center justify-between pb-4  border-b  border-white/10">
                     <div className="text">
-                      <p className="inline-flex items-center text-dark text-[18px] leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                      <p className="inline-flex items-center  text-[18px] leading-[1.5] tracking-[-0.05px] text-wht">
                         <img
                           className="inline-block w-[20px] h-[20px] mr-[5px]"
                           src={lineChartUp}
@@ -249,7 +249,7 @@ export default function TradingOverview() {
                         />
                         Avg. Winning Trade
                         <svg
-                          className="inline-block w-[17px] h-[17px] fill-dark ml-[5px] dark:fill-white"
+                          className="inline-block w-[17px] h-[17px]  ml-[5px] fill-white"
                           focusable="false"
                           viewBox="0 0 24 24"
                           aria-hidden="true"
@@ -258,14 +258,14 @@ export default function TradingOverview() {
                         </svg>
                       </p>
                     </div>
-                    <div className="numb text-dark text-[18px] leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                    <div className="numb  text-[18px] leading-[1.5] tracking-[-0.05px] text-wht">
                       $70.00
                     </div>
                   </div>
 
                   <div className="stats-list flex flex-wrap items-center justify-between pb-4  border-b  border-white/10">
                     <div className="text">
-                      <p className="inline-flex items-center text-dark text-[18px] leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                      <p className="inline-flex items-center  text-[18px] leading-[1.5] tracking-[-0.05px] text-wht">
                         <img
                           className="inline-block w-[20px] h-[20px] mr-[5px]"
                           src={lineChartDown}
@@ -273,7 +273,7 @@ export default function TradingOverview() {
                         />
                         Avg. Losing Trade
                         <svg
-                          className="inline-block w-[17px] h-[17px] fill-dark ml-[5px] dark:fill-white"
+                          className="inline-block w-[17px] h-[17px] ml-[5px] fill-white"
                           focusable="false"
                           viewBox="0 0 24 24"
                           aria-hidden="true"
@@ -282,14 +282,14 @@ export default function TradingOverview() {
                         </svg>
                       </p>
                     </div>
-                    <div className="numb text-dark text-[18px] leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                    <div className="numb  text-[18px] leading-[1.5] tracking-[-0.05px] text-wht">
                       -$20.00
                     </div>
                   </div>
 
                   <div className="stats-list flex flex-wrap items-center justify-between pb-4  border-b  border-white/10">
                     <div className="text">
-                      <p className="inline-flex items-center text-dark text-[18px] leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                      <p className="inline-flex items-center  text-[18px] leading-[1.5] tracking-[-0.05px] text-wht">
                         <img
                           className="inline-block w-[20px] h-[20px] mr-[5px]"
                           src={lineChartDown}
@@ -297,7 +297,7 @@ export default function TradingOverview() {
                         />
                         Avg. Losing Trade
                         <svg
-                          className="inline-block w-[17px] h-[17px] fill-dark ml-[5px] dark:fill-white"
+                          className="inline-block w-[17px] h-[17px] ml-[5px] fill-white"
                           focusable="false"
                           viewBox="0 0 24 24"
                           aria-hidden="true"
@@ -306,14 +306,14 @@ export default function TradingOverview() {
                         </svg>
                       </p>
                     </div>
-                    <div className="numb text-dark text-[18px] leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                    <div className="numb  text-[18px] leading-[1.5] tracking-[-0.05px] text-wht">
                       105
                     </div>
                   </div>
 
                   <div className="stats-list flex flex-wrap items-center justify-between pb-4  border-b  border-white/10">
                     <div className="text">
-                      <p className="inline-flex items-center text-dark text-[18px] leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                      <p className="inline-flex items-center  text-[18px] leading-[1.5] tracking-[-0.05px] text-wht">
                         <img
                           className="inline-block w-[20px] h-[20px] mr-[5px]"
                           src={iconGrid}
@@ -321,7 +321,7 @@ export default function TradingOverview() {
                         />
                         Avg. Losing Trade
                         <svg
-                          className="inline-block w-[17px] h-[17px] fill-dark ml-[5px] dark:fill-white"
+                          className="inline-block w-[17px] h-[17px] ml-[5px] fill-white"
                           focusable="false"
                           viewBox="0 0 24 24"
                           aria-hidden="true"
@@ -330,14 +330,14 @@ export default function TradingOverview() {
                         </svg>
                       </p>
                     </div>
-                    <div className="numb text-dark text-[18px] leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                    <div className="numb  text-[18px] leading-[1.5] tracking-[-0.05px] text-wht">
                       Lots
                     </div>
                   </div>
 
                   <div className="stats-list flex flex-wrap items-center justify-between pb-4 border-b  border-white/10">
                     <div className="text">
-                      <p className="inline-flex items-center text-dark text-[18px] leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                      <p className="inline-flex items-center  text-[18px] leading-[1.5] tracking-[-0.05px] text-wht">
                         <img
                           className="inline-block w-[20px] h-[20px] mr-[5px]"
                           src={VerticalAlign}
@@ -354,14 +354,14 @@ export default function TradingOverview() {
                         </svg>
                       </p>
                     </div>
-                    <div className="numb text-dark text-[18px] leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                    <div className="numb  text-[18px] leading-[1.5] tracking-[-0.05px] text-wht">
                       0
                     </div>
                   </div>
 
                   <div className="stats-list flex flex-wrap items-center justify-between">
                     <div className="text">
-                      <p className="inline-flex items-center text-dark text-[18px] leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                      <p className="inline-flex items-center  text-[18px] leading-[1.5] tracking-[-0.05px] text-wht">
                         <img
                           className="inline-block w-[20px] h-[20px] mr-[5px]"
                           src={MergeType}
@@ -369,7 +369,7 @@ export default function TradingOverview() {
                         />
                         Win Rate
                         <svg
-                          className="inline-block w-[17px] h-[17px] fill-dark ml-[5px] dark:fill-white"
+                          className="inline-block w-[17px] h-[17px] ml-[5px] fill-white"
                           focusable="false"
                           viewBox="0 0 24 24"
                           aria-hidden="true"
@@ -378,7 +378,7 @@ export default function TradingOverview() {
                         </svg>
                       </p>
                     </div>
-                    <div className="numb text-dark text-[18px] leading-[1.5] tracking-[-0.05px]  dark:text-wht">
+                    <div className="numb  text-[18px] leading-[1.5] tracking-[-0.05px]  text-wht">
                       65%
                     </div>
                   </div>
@@ -394,7 +394,7 @@ export default function TradingOverview() {
                   <h3 className="card-title !mb-0">Trading History</h3>
                   <a
                     href="#"
-                    className="bg-primary text-dark/90 py-2 px-7 font-semibold rounded-3xl"
+                    className="bg-primary /90 py-2 px-7 font-semibold rounded-3xl text-main-bg"
                   >
                     Download
                   </a>
@@ -403,167 +403,167 @@ export default function TradingOverview() {
                   <div className="trading-wrap overflow-x-auto">
                     <div className="responsive-wrap min-w-[1200px]">
                       <div className="heading grid grid-cols-[50px_1fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr] gap-[10px] border-b border-[#000]/10 py-[10px]">
-                        <p className=" text-dark text-[16px] leading-[1.5] font-semibold tracking-[-0.05px] dark:text-wht">
+                        <p className="  text-[16px] leading-[1.5] font-semibold tracking-[-0.05px] text-wht">
                           SN
                         </p>
-                        <p className="inline-flex items-center text-dark text-[16px] leading-[1.5] font-semibold tracking-[-0.05px] dark:text-wht">
+                        <p className="inline-flex items-center  text-[16px] leading-[1.5] font-semibold tracking-[-0.05px] text-wht">
                           Open Time
                         </p>
-                        <p className="inline-flex items-center text-dark text-[16px] leading-[1.5] font-semibold tracking-[-0.05px] dark:text-wht">
+                        <p className="inline-flex items-center  text-[16px] leading-[1.5] font-semibold tracking-[-0.05px] text-wht">
                           Open Price
                         </p>
-                        <p className="inline-flex items-center text-dark text-[16px] leading-[1.5] font-semibold tracking-[-0.05px] dark:text-wht">
+                        <p className="inline-flex items-center  text-[16px] leading-[1.5] font-semibold tracking-[-0.05px] text-wht">
                           Close Time
                         </p>
-                        <p className="inline-flex items-center text-dark text-[16px] leading-[1.5] font-semibold tracking-[-0.05px] dark:text-wht">
+                        <p className="inline-flex items-center  text-[16px] leading-[1.5] font-semibold tracking-[-0.05px] text-wht">
                           Close Price
                         </p>
-                        <p className="inline-flex items-center text-dark text-[16px] leading-[1.5]  font-semibold tracking-[-0.05px] dark:text-wht">
+                        <p className="inline-flex items-center  text-[16px] leading-[1.5]  font-semibold tracking-[-0.05px] text-wht">
                           lots
                         </p>
-                        <p className="inline-flex items-center text-dark text-[16px] leading-[1.5]  font-semibold tracking-[-0.05px] dark:text-wht">
+                        <p className="inline-flex items-center  text-[16px] leading-[1.5]  font-semibold tracking-[-0.05px] text-wht">
                           Profit
                         </p>
-                        <p className="inline-flex items-center text-dark text-[16px] leading-[1.5]  font-semibold tracking-[-0.05px] dark:text-wht">
+                        <p className="inline-flex items-center  text-[16px] leading-[1.5]  font-semibold tracking-[-0.05px] text-wht">
                           Commission
                         </p>
-                        <p className="inline-flex items-center text-dark text-[16px] leading-[1.5]  font-semibold tracking-[-0.05px] dark:text-wht">
+                        <p className="inline-flex items-center  text-[16px] leading-[1.5]  font-semibold tracking-[-0.05px] text-wht">
                           Swap
                         </p>
-                        <p className="inline-flex items-center text-dark text-[16px] leading-[1.5]  font-semibold tracking-[-0.05px] dark:text-wht">
+                        <p className="inline-flex items-center  text-[16px] leading-[1.5]  font-semibold tracking-[-0.05px] text-wht">
                           Symbol
                         </p>
-                        <p className="inline-flex items-center text-dark text-[16px] leading-[1.5]  font-semibold tracking-[-0.05px] dark:text-wht">
+                        <p className="inline-flex items-center  text-[16px] leading-[1.5]  font-semibold tracking-[-0.05px] text-wht">
                           Type
                         </p>
-                        <p className="inline-flex items-center text-dark text-[16px] leading-[1.5]  font-semibold tracking-[-0.05px] dark:text-wht">
+                        <p className="inline-flex items-center  text-[16px] leading-[1.5]  font-semibold tracking-[-0.05px] text-wht">
                           Details
                         </p>
                       </div>
                       <div className="content grid items-center grid-cols-[50px_1fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr] gap-[10px] border-b border-[#000]/10 py-[10px]">
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           1
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           2022.01.01 08:01:47
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           47199.83
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           2022.01.01 08:10:02
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           47254.29
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           1
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           $54.46
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           -$236.00
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           0
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           BTCUSD
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           Buy
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           <a
                             href="#"
-                            className="inline-block px-4 py-[5px] text-dark border border-dark rounded-3xl transition-all duration-300 ease-linear hover:bg-primary hover:border-primary hover:text-main-bg dark:bg-primary  text-xs"
+                            className="inline-block px-4 py-[5px]  border border-dark rounded-3xl transition-all duration-300 ease-linear hover:bg-primary hover:border-primary hover:text-main-bg bg-primary  text-xs text-main-bg"
                           >
                             View
                           </a>
                         </p>
                       </div>
                       <div className="content grid items-center grid-cols-[50px_1fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr] gap-[10px] border-b border-[#000]/10 py-[10px]">
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           2
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           2022.01.01 08:01:47
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           47199.83
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           2022.01.01 08:10:02
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           47254.29
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           1
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           $54.46
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           -$236.00
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           0
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           BTCUSD
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           Buy
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           <a
                             href="#"
-                            className="inline-block px-4 py-[5px] text-dark border border-dark rounded-3xl transition-all duration-300 ease-linear hover:bg-primary hover:border-primary hover:text-main-bg  dark:bg-primary text-xs"
+                            className="inline-block px-4 py-[5px]  border border-dark rounded-3xl transition-all duration-300 ease-linear hover:bg-primary hover:border-primary hover:text-main-bg  bg-primary text-xs text-main-bg"
                           >
                             View
                           </a>
                         </p>
                       </div>
                       <div className="content grid items-center grid-cols-[50px_1fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr] gap-[10px] border-b border-[#000]/10 py-[10px]">
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           3
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           2022.01.01 08:01:47
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           47199.83
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           2022.01.01 08:10:02
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           47254.29
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           1
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           $54.46
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           -$236.00
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           0
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           BTCUSD
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] dark:text-wht">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] text-wht">
                           Buy
                         </p>
-                        <p className="text-[14px] text-dark leading-[1.5] tracking-[-0.05px] ">
+                        <p className="text-[14px]  leading-[1.5] tracking-[-0.05px] ">
                           <a
                             href="#"
-                            className="inline-block px-4 py-[5px] text-dark border border-dark rounded-3xl transition-all duration-300 ease-linear hover:bg-primary hover:border-primary hover:text-main-bg bg-primary text-xs"
+                            className="inline-block px-4 py-[5px]  border border-dark rounded-3xl transition-all duration-300 ease-linear hover:bg-primary hover:border-primary hover:text-main-bg bg-primary text-xs text-main-bg"
                           >
                             View
                           </a>

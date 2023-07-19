@@ -1,15 +1,44 @@
 import { circle, mainLogo, tick } from "../ui/images";
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
-
-import { Link, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { LoginSocialGoogle, LoginSocialFacebook } from "reactjs-social-login";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useState, } from "react";
 import { RxCross1 } from "react-icons/rx";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import SignUpModal from "../components/SignUpModal";
-
+import { useForm } from "react-hook-form";
+import axios from "axios"; 
 export default function Login() {
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+//  Login User
+const handleLogin = async (data) => {
+  // console.log(data)
+  try {
+    const response = await axios.post("http://localhost:5000/login", data);
+    console.log(response.data)
+    if (response.data.token) {
+      console.log(response.data.token)
+      // If login is successful and a token is received, store the token in local storage
+      localStorage.setItem("token", response.data.token);
+      // Redirect to the protected route (you can change "/protected" to your desired protected route)
+      navigate("/dashboard");
+    }
+  } catch (error) {
+    setError("Invalid email or password"); // Set error message if login fails
+  }
+};
+
   const [forgetModal, setForgetModal] = useState(false);
   const [registerModal, setRegisterModal] = useState(false);
+
+    const [user, setUser] = useState('')
 
   useEffect(() => {
     const html = document.querySelector("html");
@@ -73,7 +102,7 @@ export default function Login() {
       <section className="relative">
         <div className="container relative">
           <div className="wrapper z-10 relative flex justify-center items-center min-h-[40vh] pt-12 md:pt-20 sm:mb-20 pb-24 sm:pb-36">
-            <form
+            <form onSubmit={handleSubmit(handleLogin)}
               className="grid gap-3 p-7 relative z-10 rounded-2xl bg-main-bg/70 border-primary max-w-[30rem] w-full"
               action=""
             >
@@ -97,6 +126,9 @@ export default function Login() {
               {/* Email */}
               <div className="email mt-3">
                 <input
+                  {...register("email", {
+                    required: "email address is required",
+                  })}
                   name="email"
                   className="email w-full focus:outline-primary/80 border-none outline outline-2 outline-primary/50 bg-transparent py-2 sm:py-2.5 px-6 rounded-2xl transition-all duration-200"
                   type="email"
@@ -116,7 +148,10 @@ export default function Login() {
               {/* Password */}
               <div className="email">
                 <input
-                  name="email"
+                 {...register("password", {
+                  required: "password is required"
+                })}
+                  name="password"
                   className="email w-full focus:outline-primary/80 border-none outline outline-2 outline-primary/50  bg-transparent py-2 sm:py-2.5 px-6 rounded-2xl transition-all duration-200"
                   type="password"
                   placeholder="Password"
@@ -141,7 +176,10 @@ export default function Login() {
 
               {/* Login button */}
               <div className="login-btn mt-10 flex justify-center items-center">
-                <button className="py-2.5 px-12 text-main-bg hover:bg-primary bg-primary/80 transition-all duration-300 rounded-3xl font-Montserrat font-semibold">
+                <button 
+                type="submit"
+                onClick={() => handleSubmit(handleLogin)}
+                className="py-2.5 px-12 text-main-bg hover:bg-primary bg-primary/80 transition-all duration-300 rounded-3xl font-Montserrat font-semibold">
                   Login
                 </button>
               </div>
@@ -154,22 +192,51 @@ export default function Login() {
                 {/* Logos */}
                 <div className="logos flex justify-center items-center gap-3">
                   {/* google */}
-                  <a
-                    href="#"
-                    className="logo h-[2.7rem] w-[2.7rem] sm:h-[3rem] sm:w-[3rem] rounded-full border-2 flex justify-center items-center"
-                  >
-                    <FaGoogle className=" w-[1.4rem] h-[1.4rem] sm:w-[1.8rem] sm:h-[1.8rem]" />
-                  </a>
+                <LoginSocialGoogle
+               client_id={"249371424368-slnd9g6nshih5mdq4bqg7v4iaavs45o9.apps.googleusercontent.com"}
+                scope="openid profile email"
+                discoveryDocs="claims_supported"
+                 access_type="offline"
+                onResolve={({ provider, data }) => {
+              setUser(provider, data);
+        //   console.log(provider, data);
+        }}
+        onReject={(err) => {
+          console.log(err);
+        }}
+      >
+ 
+        <button
+        className="logo h-[2.7rem] w-[2.7rem] sm:h-[3rem] sm:w-[3rem] rounded-full border-2 flex justify-center items-center">
+      <FaGoogle className=" w-[1.4rem] h-[1.4rem] sm:w-[1.8rem] sm:h-[1.8rem]" />
+      </button>
+      </LoginSocialGoogle>
+                 
                   {/* facebook */}
-                  <a
-                    href="#"
-                    className="logo h-[2.7rem] w-[2.7rem] sm:h-[3rem] sm:w-[3rem] rounded-full border-2 flex justify-center items-center"
-                  >
-                    <FaFacebookF className="w-[1.4rem] h-[1.4rem] sm:w-[1.8rem] sm:h-[1.8rem]" />
-                  </a>
+        <LoginSocialFacebook
+        appId={"655086316660441"}
+        provider="facebook"
+        scope="email"
+        access_type="offline"
+        onResolve={({ response }) => {
+          console.log(response);
+        }}
+        onReject={(err) => {
+          console.log("err", err);
+        }}
+       >
+       <button
+        className="logo h-[2.7rem] w-[2.7rem] sm:h-[3rem] sm:w-[3rem] rounded-full border-2 flex justify-center items-center"
+        >
+       <FaFacebookF className="w-[1.4rem] h-[1.4rem] sm:w-[1.8rem] sm:h-[1.8rem]" />
+        </button>
+       </LoginSocialFacebook>
+                  
                 </div>
               </div>
             </form>
+
+
             {/* cirlce */}
             <img
               className="cirlce absolute left-[15%] -top-[30%]  w-[50rem] rotate-[80deg] opacity-[0.2]"

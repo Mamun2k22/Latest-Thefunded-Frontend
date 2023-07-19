@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import Registration from "./pages/Registration";
 import Dashboard from "./pages/Dashboard";
 import Contact from "./pages/Contact";
 import Faq from "./pages/Faq";
@@ -35,7 +34,6 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="contact" element={<Contact />} />
           <Route path="checkout" element={<Checkout />} />
-          <Route path="registration" element={<Registration />} />
           <Route path="faq" element={<Faq />} />
           <Route path="cookie-policy" element={<CookiePolicy />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
