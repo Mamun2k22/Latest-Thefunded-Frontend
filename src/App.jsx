@@ -1,10 +1,10 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React, { useState, createContext } from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Contact from "./pages/Contact";
 import Faq from "./pages/Faq";
-
 import Checkout from "./pages/Checkout";
 import TradingOverview from "./components/dashboard/TradingOverview";
 import Withdraw from "./components/dashboard/Withdraw";
@@ -21,17 +21,39 @@ import TermCondition from "./pages/TermCondition";
 // CSS
 import "./App.css";
 
+// login
+
 import Billing from "./components/dashboard/Billing";
 import RiskDisclosure from "./pages/RiskDisclosure";
 import ReportProblem from "./pages/ReportProblem";
 import Chart from "./components/dashboard/Chart";
-function App() {
+import EmailVerified from "./components/EmailVerified";
+import Reset from "./components/Reset";
+
+// export const RecoveryContext = createContext();
+
+function App() { 
+  // const [page, setPage] = useState("login");
+  // const [email, setEmail] = useState();
+  // const [otp, setOTP] = useState();
+
+  function NavigateComponents() {
+    // if (page === "login") return <Login />;
+    // if (page === "otp") return <OTPInput />;
+    // if (page === "reset") return <Reset />;
+
+    // return <Recovered />;
+  }
+
   return (
-    <div className="App">
-      <Router>
+    <Router> {/* Move the Router here to wrap the entire App component */}
+      <div className="App">
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/" element={<Home />} />
           <Route path="login" element={<Login />} />
+          <Route path="/email-verification" element={<EmailVerified/>} />
+          <Route path="/change-password" element={<Reset/>} />
+          <Route path="/recoverd" element={<Reset/>} />
           <Route path="contact" element={<Contact />} />
           <Route path="checkout" element={<Checkout />} />
           <Route path="faq" element={<Faq />} />
@@ -54,8 +76,16 @@ function App() {
             <Route path="dashboard-contact" element={<DashContact />} />
           </Route>
         </Routes>
-      </Router>
-    </div>
+
+        {/* <RecoveryContext.Provider
+          value={{ page, setPage, otp, setOTP, setEmail, email }}
+        >
+          <div className="flex justify-center items-center">
+            <NavigateComponents />
+          </div>
+        </RecoveryContext.Provider> */}
+      </div>
+    </Router>
   );
 }
 

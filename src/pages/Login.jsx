@@ -137,13 +137,12 @@ const handleLogin = async (data) => {
               </div>
               {/* Forget password */}
               <div className="forget-pass text-end">
-                <a
+                <div
                   onClick={() => setForgetModal(true)}
-                  href="#"
-                  className="underline font-Montserrat font-medium text-sm"
+                  className="underline font-Montserrat font-medium text-sm cursor-pointer"
                 >
                   Forgot Password
-                </a>
+                </div>
               </div>
               {/* Password */}
               <div className="email">
@@ -313,21 +312,22 @@ const handleLogin = async (data) => {
             <div className="email w-full relative mt-4">
               <input
                 name="email"
+                required="true"
                 className="email w-full focus:outline-primary/80 border-none outline outline-2 outline-primary/50 bg-transparent py-2 sm:py-2.5 px-6 rounded-2xl transition-all duration-200"
                 type="email"
                 placeholder="Email"
               />
               {/* arrow */}
-              <div className="arrow absolute right-3 top-1/2 transform -translate-y-1/2">
+              <Link to="/email-verification" className="arrow absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">
                 <HiOutlineArrowNarrowRight className="text-3xl text-thin text-primary/[78%]" />
-              </div>
+              </Link>
             </div>
 
             {/* confirm btn */}
             <div className="confirm-btn mt-8 flex justify-center items-center">
-              <button className="py-2 sm:py-2.5 px-12 sm:px-16 text-main-bg hover:bg-primary bg-primary/80 transition-all duration-300 rounded-3xl font-Montserrat font-semibold">
+              <Link to="/email-verification" className="py-2 sm:py-2.5 px-12 sm:px-16 text-main-bg hover:bg-primary bg-primary/80 transition-all duration-300 rounded-3xl font-Montserrat font-semibold">
                 Confirm
-              </button>
+              </Link>
             </div>
           </form>
           {/* cross */}
